@@ -1,0 +1,25 @@
+@media only screen and (max-width: 740px) {
+    body { background: #f77; }
+  }
+
+
+@media only screen and (max-width: 570px) {
+  body { background: #7f7; }
+}
+
+@media only screen and (max-width: 480px) {
+  body { background: #77f; }
+
+  #wrapper { min-width: 0; margin: 8px; padding: 12px; width: 100%; }
+
+  .page-header img {
+    float: none;
+    display: block;
+    margin: 0 auto 8px;
+    width: 88px; height: 88px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  h1, h2 { text-align: center; }
+}

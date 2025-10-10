@@ -9,38 +9,33 @@
     <meta name="author" content="Sarah Anissi" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="css/resume.css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    
+
     <script src="https://use.edgefonts.net/source-sans-pro:n4,n7.js"></script>
   </head>
 
   <body>
-    <!-- Entité Person principale -->
-    <div id="wrapper" itemscope itemtype="http://schema.org/Person" itemid="#sarah">
+    <div id="wrapper">
 
       <header class="page-header">
-        <img src="images/photo.png " alt="Photo de Sarah Anissi" itemprop="image" />
+        <img src="images/photo.png" alt="Photo de Sarah Anissi" />
 
-        <h1><i class="fa fa-user"></i> <span itemprop="name">Sarah Anissi</span></h1>
-        <h2><i class="fa fa-graduation-cap"></i> <span itemprop="jobTitle">Étudiante en génie informatique</span></h2>
-
+        <h1><i class="fa fa-user"></i> Sarah Anissi</h1>
+        <h2><i class="fa fa-graduation-cap"></i> Étudiante en génie informatique</h2>
         <p>
-          <i class="fa fa-map-marker"></i> Adresse :
-          <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-            <span itemprop="streetAddress">2 rue Val Fleuri</span>,
-            <span itemprop="addressLocality">Lille</span>
-          </span><br />
-          <i class="fa fa-birthday-cake"></i> Date de naissance :
-          <time itemprop="birthDate" datetime="2003-12-05">05-12-2003</time><br />
-          <i class="fa fa-phone"></i> Téléphone : <span itemprop="telephone">+33 7 54 89 12 66</span><br />
+          <i class="fa fa-map-marker"></i> Adresse : 2 rue Val Fleuri, Lille<br />
+          <i class="fa fa-birthday-cake"></i> Date de naissance : 05-12-2003<br />
+          <i class="fa fa-phone"></i> Téléphone : +33 7 54 89 12 66<br />
           <i class="fa fa-envelope"></i> Email :
-          <a href="mailto:sarah.anissi@gmail.com" itemprop="email">sarah.anissi@gmail.com</a>
+          <a href="mailto:sarah.anissi@gmail.com">sarah.anissi@gmail.com</a>
         </p>
       </header>
 
       <article class="section">
         <h2><i class="fa fa-info-circle"></i> Présentation</h2>
-        <p itemprop="description">
+        <p>
           Étudiante en dernière année de génie informatique, passionnée par le
           développement logiciel, l’intelligence artificielle et les systèmes
           embarqués. Curieuse, rigoureuse et motivée, je cherche un stage de fin
@@ -52,7 +47,7 @@
       <article class="section">
         <h2><i class="fa fa-briefcase"></i> Expérience professionnelle</h2>
 
-        <h4><i class="fa fa-code"></i> Stage Ingénieure Frontend — <span itemprop="worksFor">Neotech</span></h4>
+        <h4><i class="fa fa-code"></i> Stage Ingénieure Frontend — Neotech</h4>
         <p><em><i class="fa fa-map-marker"></i> Paris | Avril 2024 – Juin 2024</em></p>
         <ul>
           <li>Conception et développement d’une application web interne (React + FastAPI).</li>
@@ -71,19 +66,19 @@
       <article class="section">
         <h2><i class="fa fa-cogs"></i> Compétences</h2>
         <dl>
-          <dt>Langages de programmation</dt>
+          <dt><i class="fa fa-code"></i> Langages de programmation</dt>
           <dd>Python, C, C++, Java, JavaScript</dd>
 
-          <dt>Développement web</dt>
+          <dt><i class="fa fa-globe"></i> Développement web</dt>
           <dd>HTML, CSS, React.js, Node.js, FastAPI</dd>
 
-          <dt>Gestion de projet</dt>
+          <dt><i class="fa fa-tasks"></i> Gestion de projet</dt>
           <dd>Méthodologies Agile/Scrum, planification, coordination d’équipes, suivi de KPI et reporting</dd>
 
-          <dt>Analyse et data</dt>
+          <dt><i class="fa fa-database"></i> Analyse et data</dt>
           <dd>Suivi de performance, visualisation de données, outils d’analyse (Pandas, Scikit-learn, Data Studio)</dd>
- 
-          <dt> Outils et environnement</dt>
+
+          <dt><i class="fa fa-wrench"></i> Outils et environnement</dt>
           <dd>Linux, Git, Docker, GitHub, GitLab</dd>
         </dl>
       </article>
@@ -91,60 +86,40 @@
       <article class="section">
         <h2><i class="fa fa-language"></i> Langues</h2>
         <ul>
-          <li></i> Français : Langue maternelle</li>
-          <li></i> Anglais : Courant (TOEIC 905)</li>
-          <li> Espagnol : Intermédiaire</li>
+          <li><i class="fa fa-flag"></i> Français : Langue maternelle</li>
+          <li><i class="fa fa-flag"></i> Anglais : Courant (TOEIC 905)</li>
+          <li><i class="fa fa-flag"></i> Espagnol : Intermédiaire</li>
         </ul>
       </article>
 
       <article class="section">
         <h2><i class="fa fa-heart"></i> Centres d’intérêt</h2>
         <ul>
-          <li>Programmation et hackathons étudiants</li>
-          <li> Robotique et électronique</li>
-          <li></i> Sport : natation, randonnée</li>
-          <li> Lecture scientifique et veille technologique</li>
-          <li>Musique (guitare, piano)</li>
+          <li><i class="fa fa-laptop"></i> Programmation et hackathons étudiants</li>
+          <li><i class="fa fa-rocket"></i> Robotique et électronique</li>
+          <li><i class="fa fa-futbol-o"></i> Sport : natation, randonnée</li>
+          <li><i class="fa fa-book"></i> Lecture scientifique et veille technologique</li>
+          <li><i class="fa fa-music"></i> Musique (guitare, piano)</li>
         </ul>
       </article>
 
       <footer>
         <h2><i class="fa fa-share-alt"></i> Réseaux et contacts</h2>
         <p>
-          <i class="fa fa-linkedin"></i>
-          <a href="https://www.linkedin.com/in/sarah-anissi" target="_blank" rel="noopener noreferrer" itemprop="sameAs">LinkedIn</a>
+          <i class="fa fa-linkedin"></i> <a href="https://www.linkedin.com/in/sarah-anissi" target="_blank">LinkedIn</a>
           &nbsp; | &nbsp;
-          <i class="fa fa-github"></i>
-          <a href="https://github.com/sarah-anissi" target="_blank" rel="noopener noreferrer" itemprop="sameAs">GitHub</a>
+          <i class="fa fa-github"></i> <a href="https://github.com/sarah-anissi" target="_blank">GitHub</a>
           &nbsp; | &nbsp;
-          <i class="fa fa-twitter"></i>
-          <a href="https://twitter.com/sarah_anissi" target="_blank" rel="noopener noreferrer" itemprop="sameAs">Twitter</a>
+          <i class="fa fa-twitter"></i> <a href="https://twitter.com/sarah_anissi" target="_blank">Twitter</a>
           &nbsp; | &nbsp;
-          <i class="fa fa-flickr"></i>
-          <a href="https://www.flickr.com/photos/sarah-anissi" target="_blank" rel="noopener noreferrer" itemprop="sameAs">Flickr</a>
+          <i class="fa fa-flickr"></i> <a href="https://www.flickr.com/photos/sarah-anissi" target="_blank">Flickr</a>
         </p>
         <p>
-          © 2025 <span itemprop="name">Sarah Anissi</span> — Tous droits réservés.<br />
+          © 2025 Sarah Anissi — Tous droits réservés.<br />
           Cette page a été créée dans le cadre d’un projet académique en génie informatique.
         </p>
       </footer>
     </div>
   </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
