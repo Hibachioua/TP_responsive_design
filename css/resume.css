@@ -130,3 +130,34 @@ footer a:hover {
   transform: scale(1); 
   opacity: 1; 
 }
+
+.skill {
+  color: #2c5aa0;
+  font-weight: 500;
+  cursor: help;
+  border-bottom: 2px dotted #2c5aa0;
+  padding-bottom: 2px;
+}
+
+.skill:hover {
+  color: #1a3d73;
+  border-bottom: 2px solid #1a3d73;
+}
+
+/* Tooltip qui suit la souris */
+#tooltip {
+  position: fixed;
+  background: #333;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  max-width: 250px;
+  display: none;
+  z-index: 9999;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+#tooltip.show {
+  display: block;
+}

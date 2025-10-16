@@ -67,4 +67,28 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.textContent = !isOpen ? 'Détails –' : 'Détails +';
     });
   });
+
+
+    const tooltip = document.getElementById('tooltip');
+  const skills = document.querySelectorAll('.skill');
+
+  skills.forEach(function(skill) {
+    
+    skill.addEventListener('mouseenter', function() {
+      const text = this.getAttribute('data-info');
+      tooltip.textContent = text;
+      tooltip.classList.add('show');
+    });
+
+    skill.addEventListener('mousemove', function(e) {
+      tooltip.style.left = (e.clientX + 10) + 'px';
+      tooltip.style.top = (e.clientY + 10) + 'px';
+    });
+
+    skill.addEventListener('mouseleave', function() {
+      tooltip.classList.remove('show');
+    });
+
+  });
+
 });

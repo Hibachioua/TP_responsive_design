@@ -14,8 +14,8 @@
   <link rel="stylesheet" href="css/responsive.css">
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
   <script src="js/script.js" defer></script>
-
 </head>
+
 <body>
   <div id="wrapper" itemscope itemtype="http://schema.org/Person" itemid="#sarah">
 
@@ -43,10 +43,10 @@
       <h2><i class="fa fa-info-circle"></i> Présentation</h2>
       <p itemprop="description">
         Étudiante en dernière année de génie informatique, passionnée par le
-        développement logiciel, l’intelligence artificielle et les systèmes
+        développement logiciel, l'intelligence artificielle et les systèmes
         embarqués. Curieuse, rigoureuse et motivée, je cherche un stage de fin
-        d’études pour mettre mes compétences techniques et mon sens de
-        l’innovation au service de projets concrets.
+        d'études pour mettre mes compétences techniques et mon sens de
+        l'innovation au service de projets concrets.
       </p>
     </article>
 
@@ -56,64 +56,76 @@
       <h4 class="xp">
         <i class="fa fa-code"></i> Stage Ingénieure Frontend — <span itemprop="worksFor">Neotech</span>
         <button class="btn-details" aria-expanded="false" aria-controls="det-neotech">Détails +</button>
-        </h4>
-        <p><em><i class="fa fa-map-marker"></i> Paris | Avril 2024 – Juin 2024</em></p>
-        <div id="det-neotech" class="details" hidden>
-          <ul>
-            <li>Conception et développement d’une application web interne (React + FastAPI).</li>
-            <li>Implémentation d’un système de gestion des utilisateurs avec authentification sécurisée.</li>
-            <li>Rédaction de la documentation technique et mise en place de tests unitaires.</li>
-          </ul>
-        </div>
-        <h4 class="xp">
-          <i class="fa fa-mobile"></i> Stage en Développement mobile — NES
-          <button class="btn-details" aria-expanded="false" aria-controls="det-nes">Détails +</button>
-        </h4>
-        <p><em><i class="fa fa-map-marker"></i> Nice | Juillet 2023 – Septembre 2023</em></p>
-        <div id="det-nes" class="details" hidden>
-          <ul>
-            <li>Développement d’une application Android collaborative pour la gestion de projets étudiants.</li>
-            <li>Utilisation de Firebase pour la base de données en temps réel et l’authentification Google.</li>
-          </ul>
-        </div>
+      </h4>
+      <p><em><i class="fa fa-map-marker"></i> Paris | Avril 2024 – Juin 2024</em></p>
+      <div id="det-neotech" class="details" hidden>
+        <ul>
+          <li>Conception et développement d'une application web interne (React + FastAPI).</li>
+          <li>Implémentation d'un système de gestion des utilisateurs avec authentification sécurisée.</li>
+          <li>Rédaction de la documentation technique et mise en place de tests unitaires.</li>
+        </ul>
+      </div>
+
+      <h4 class="xp">
+        <i class="fa fa-mobile"></i> Stage en Développement mobile — NES
+        <button class="btn-details" aria-expanded="false" aria-controls="det-nes">Détails +</button>
+      </h4>
+      <p><em><i class="fa fa-map-marker"></i> Nice | Juillet 2023 – Septembre 2023</em></p>
+      <div id="det-nes" class="details" hidden>
+        <ul>
+          <li>Développement d'une application Android collaborative pour la gestion de projets étudiants.</li>
+          <li>Utilisation de Firebase pour la base de données en temps réel et l'authentification Google.</li>
+        </ul>
+      </div>
     </article>
 
     <article class="section">
       <h2><i class="fa fa-cogs"></i> Compétences</h2>
       <dl>
         <dt>Langages de programmation</dt>
-        <dd>Python, C, C++, Java, JavaScript</dd>
+        <dd>
+          <span class="skill" data-info="Langage polyvalent pour le web et la data science">Python</span>, 
+          <span class="skill" data-info="Langage bas niveau pour systèmes embarqués">C</span>, 
+          <span class="skill" data-info="Extension orientée objet de C">C++</span>, 
+          <span class="skill" data-info="Langage pour applications Android et entreprise">Java</span>, 
+          <span class="skill" data-info="Langage essentiel pour le développement web">JavaScript</span>
+        </dd>
 
         <dt>Développement web</dt>
-        <dd>HTML, CSS, React.js, Node.js, FastAPI</dd>
+        <dd>
+          <span class="skill" data-info="Langage de balisage pour structurer les pages web">HTML</span>, 
+          <span class="skill" data-info="Langage pour la mise en forme et le design">CSS</span>, 
+          <span class="skill" data-info="Bibliothèque JavaScript pour interfaces interactives">React.js</span>, 
+          <span class="skill" data-info="JavaScript côté serveur">Node.js</span>, 
+          <span class="skill" data-info="Framework Python pour créer des APIs">FastAPI</span>
+        </dd>
 
-        <dt>Gestion de projet</dt>
-        <dd>Méthodologies Agile/Scrum, planification, coordination d’équipes, suivi de KPI et reporting</dd>
-
-        <dt>Analyse et data</dt>
-        <dd>Suivi de performance, visualisation de données, outils d’analyse (Pandas, Scikit-learn, Data Studio)</dd>
-
-        <dt> Outils et environnement</dt>
-        <dd>Linux, Git, Docker, GitHub, GitLab</dd>
+        <dt>Outils et environnement</dt>
+        <dd>
+          <span class="skill" data-info="Système d'exploitation open-source">Linux</span>, 
+          <span class="skill" data-info="Système de contrôle de version">Git</span>, 
+          <span class="skill" data-info="Plateforme de conteneurisation">Docker</span>, 
+          <span class="skill" data-info="Plateforme d'hébergement de code">GitHub</span>
+        </dd>
       </dl>
     </article>
 
     <article class="section">
       <h2><i class="fa fa-language"></i> Langues</h2>
       <ul>
-        <li></i> Français : Langue maternelle</li>
-        <li></i> Anglais : Courant (TOEIC 905)</li>
-        <li> Espagnol : Intermédiaire</li>
+        <li>Français : Langue maternelle</li>
+        <li>Anglais : Courant (TOEIC 905)</li>
+        <li>Espagnol : Intermédiaire</li>
       </ul>
     </article>
 
     <article class="section">
-      <h2><i class="fa fa-heart"></i> Centres d’intérêt</h2>
+      <h2><i class="fa fa-heart"></i> Centres d'intérêt</h2>
       <ul>
         <li>Programmation et hackathons étudiants</li>
-        <li> Robotique et électronique</li>
-        <li></i> Sport : natation, randonnée</li>
-        <li> Lecture scientifique et veille technologique</li>
+        <li>Robotique et électronique</li>
+        <li>Sport : natation, randonnée</li>
+        <li>Lecture scientifique et veille technologique</li>
         <li>Musique (guitare, piano)</li>
       </ul>
     </article>
@@ -138,10 +150,12 @@
       </p>
       <p>
         © 2025 <span itemprop="name">Sarah Anissi</span> — Tous droits réservés.<br />
-        Cette page a été créée dans le cadre d’un projet académique en génie informatique.
+        Cette page a été créée dans le cadre d'un projet académique en génie informatique.
       </p>
     </footer>
   </div>
-</body>
 
+  <div id="tooltip"></div>
+
+</body>
 </html>
