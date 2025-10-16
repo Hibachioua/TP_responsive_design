@@ -105,6 +105,28 @@ footer a:hover {
   text-decoration: underline;
 }
 
+.btn-details{
+  margin-left:.5rem; font-size:.85rem; padding:.2rem .5rem;
+  border:1px solid #bbb; border-radius:4px; background:#f7f7f7; cursor:pointer;
+}
+.btn-details:hover{ background:#eee; }
 
 
 
+
+.details{ 
+  overflow:hidden; 
+  transition: height .25s ease, opacity .25s ease, transform .25s ease; 
+  transform-origin: top;
+}
+
+.details > *{ 
+  transform: scale(0.95); 
+  opacity: 0; 
+  transition: transform .4s ease, opacity .4s ease; 
+}
+
+.details:not([hidden]) > *{ 
+  transform: scale(1); 
+  opacity: 1; 
+}

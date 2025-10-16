@@ -1,5 +1,8 @@
 # TP Responsive Design - Mon CV en ligne
 
+Le CV est déployé sur **GitHub Pages** (équivalent de GitLab Pages) et est accessible à l'adresse :
+**https://hibachioua.github.io/TP_responsive_design/**
+
 ## À propos
 Ce TP est un projet développé en HTML/CSS dans le cadre du UE : Développement Clients Web.
 
@@ -61,3 +64,44 @@ Les moteurs de recherche peuvent mieux comprendre et indexer le contenu du CV, c
 - Adobe Edge Web Fonts (Source Sans Pro)
 - Git / GitHub pour la gestion de versions et l'hébergement
 
+# TP - JavaScript
+
+## Apparition des descriptions détaillées
+
+### 1.1 - Boutons d'affichage des détails
+
+J'ai ajouté des boutons "Détails +" dans la section **Expérience professionnelle** pour afficher/masquer les descriptions détaillées de chaque stage :
+
+- **Attributs ARIA** : `aria-expanded` et `aria-controls` pour l'accessibilité
+- **État initial** : les blocs `.details` sont masqués avec l'attribut HTML `hidden`
+- **Classe CSS** : `.btn-details` pour le style des boutons
+
+### 1.2 - Animation d'ouverture/fermeture
+
+**Fonction `slideToggle()`** :
+- Gère l'animation de hauteur progressive (0 → hauteur réelle)
+- Utilise `requestAnimationFrame()` pour une animation fluide
+- Transition CSS de 250ms avec `ease`
+
+**Fonction `closeSiblings()`** :
+- Ferme automatiquement les autres descriptions ouvertes dans la même section
+- Permet d'avoir une seule description visible à la fois
+
+**Comportement** :
+- Au clic sur un bouton, le texte change : "Détails +" ↔ "Détails –"
+- L'attribut `aria-expanded` bascule entre `true` et `false`
+- Les autres détails se ferment automatiquement (accordion pattern)
+
+### 1.3 - Animation progressive et grandissement
+
+**Améliorations CSS** :
+- Ajout de `transform: scale()` pour un effet de zoom progressif
+- Transition sur `opacity` pour un fondu d'apparition
+- Durée d'animation portée à 400ms pour un effet plus fluide
+
+**Modification JavaScript** :
+- Intégration de `transform: scaleY()` dans la fonction `slideToggle()`
+- Utilisation de `setTimeout()` pour déclencher l'animation de manière progressive
+- Effet de grandissement lent depuis `scale(0.95)` vers `scale(1)`
+
+**Résultat** : Les descriptions apparaissent en grandissant progressivement avec un effet de fondu, créant une transition visuelle douce et professionnelle.
