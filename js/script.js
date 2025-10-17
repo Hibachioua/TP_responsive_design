@@ -89,56 +89,44 @@ function drawSkillsChart() {
   const width = canvas.width;
   const height = canvas.height;
 
-  const barWidth = 80;
-  const barSpacing = 20;
-  const maxHeight = height - 150;
+  const barHeight = 25;
+  const barSpacing = 15;
+  const maxBarWidth = width - 280;
   const maxLevel = 5;
-  const startX = 50;
-  const startY = height - 50;
+  const startX = 180;
+  const startY = 40;
+  const labelX = 20;
 
   const barColor = '#2c5aa0';
+  const barBgColor = '#e8e8e8';
   const textColor = '#333';
 
   ctx.clearRect(0, 0, width, height);
 
-  ctx.font = 'bold 18px sans-serif';
-  ctx.fillStyle = textColor;
-  ctx.textAlign = 'center';
-  ctx.fillText('Niveau de maîtrise des compétences', width / 2, 30);
-
   skillsData.forEach((skill, index) => {
-    const x = startX + index * (barWidth + barSpacing);
-    const barHeight = (skill.level / maxLevel) * maxHeight;
-    const y = startY - barHeight;
+    const y = startY + index * (barHeight + barSpacing);
+    const barWidth = (skill.level / maxLevel) * maxBarWidth;
+
+    ctx.fillStyle = barBgColor;
+    ctx.fillRect(startX, y, maxBarWidth, barHeight);
 
     ctx.fillStyle = barColor;
-    ctx.fillRect(x, y, barWidth, barHeight);
+    ctx.fillRect(startX, y, barWidth, barHeight);
 
     ctx.strokeStyle = '#1a3d73';
-    ctx.lineWidth = 2;
-    ctx.strokeRect(x, y, barWidth, barHeight);
-
-    ctx.font = 'bold 16px sans-serif';
-    ctx.fillStyle = textColor;
-    ctx.textAlign = 'center';
-    ctx.fillText(skill.level + '/5', x + barWidth / 2, y - 10);
+    ctx.lineWidth = 1;
+    ctx.strokeRect(startX, y, maxBarWidth, barHeight);
 
     ctx.font = '14px sans-serif';
     ctx.fillStyle = textColor;
-    ctx.textAlign = 'center';
-    const maxWidth = barWidth - 5;
-    ctx.fillText(skill.name, x + barWidth / 2, startY + 20, maxWidth);
+    ctx.textAlign = 'left';
+    ctx.fillText(skill.name, labelX, y + barHeight / 2 + 5);
 
-    ctx.font = '12px sans-serif';
-    ctx.fillText('⭐'.repeat(skill.level), x + barWidth / 2, startY + 35);
+    ctx.font = 'bold 12px sans-serif';
+    ctx.fillStyle = textColor;
+    ctx.textAlign = 'left';
+    ctx.fillText(skill.level + '/5', startX + maxBarWidth + 10, y + barHeight / 2 + 5);
   });
-
-  ctx.strokeStyle = '#999';
-  ctx.lineWidth = 2;
-  ctx.beginPath();
-  ctx.moveTo(startX - 20, startY);
-  ctx.lineTo(width - 30, startY);
-  ctx.stroke();
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -179,6 +167,21 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   displaySkillsRating();
-  drawSkillsChart();
+
+  const chartBtn = document.querySelector('.btn-details[aria-controls="chart-container"]');
+  const chartContainer = document.getElementById('chart-container');
+  
+  if (chartBtn && chartContainer) {
+    chartBtn.addEventListener('click', () => {
+      const isOpen = chartBtn.getAttribute('aria-expanded') === 'true';
+      slideToggle(chartContainer, !isOpen);
+      chartBtn.setAttribute('aria-expanded', String(!isOpen));
+      chartBtn.textContent = !isOpen ? 'Masquer –' : 'Afficher +';
+      
+      if (!isOpen) {
+        setTimeout(() => drawSkillsChart(), 50);
+      }
+    });
+  }
 
 });

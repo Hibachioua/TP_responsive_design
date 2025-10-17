@@ -116,8 +116,12 @@
       <h3>Niveau de maîtrise</h3>
       <div id="skills-rating"></div>
 
-      <h3>Visualisation graphique</h3>
-      <canvas id="skills-chart" width="800" height="400"></canvas>
+      <h3>Visualisation graphique
+        <button class="btn-details" aria-expanded="false" aria-controls="chart-container">Afficher +</button>
+      </h3>
+      <div id="chart-container" class="details" hidden>
+        <canvas id="skills-chart" width="600" height="280"></canvas>
+      </div>
     </article>
 
     <article class="section">
